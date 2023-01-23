@@ -1,0 +1,64 @@
+###############
+Day 4
+###############
+
+Tasks:
+1. Create a Bucket (Folder)
+Bucket:
+1. Bucket name must be "globally unique name"
+2. Bucket name shoulnt contain spaces and the upper case letters (You can have the special characters (&,*,!,@,#...) and numbers)
+
+2. Upload objects (Files) in to the Bucket
+	2.1 Download the objects
+
+3. Make the objects as a public
+4. Generate a public URL
+	ACL (Access Control List)..By default when a bucket is being created, ACLs Disabled...ACL Enable
+	Block Public Access (Checked...ON)... (Uncheck...OFF)
+	Make public using ACL
+
+BUCKET POLICY... is the permission which is given to make all the objects public that are available in a specific bucket
+
+OBJECT URL
+
+5. Try to delete the objects and Bucket
+If you want to delete the bucket, firstly we have to delete all the objects inside that bucket
+
+6. Static Website Hosting:
+Dynamic Website...Web Developers
+	Instagram
+		P1..Krishna...Followers, Following...Sports...Feed (Sports, Posts related his own followers)
+		P2..Nara Simha...Followers, Following...AWS & DevOps...Feed (AWS & DevOps
+	YouTube
+		P1...Movies...
+		P2...AWS...
+		the content inside the website will get changed based on the person
+
+Static Website
+		P1 (Mumbai), P2 (Hyderbad)...www.thehinduepaper.com (Jan 23, 2023)
+		the content inside the website will not get changed based on the person
+
+1. download an html pages related to a static website
+2. aws cloud...bucket...upload the html pages
+3. ACL (Access Control List)..By default when a bucket is being created, ACLs Disabled...ACL Enable
+    Block Public Access (Checked...ON)... (Uncheck...OFF)
+    Make public using ACL
+
+Broken Website:
+
+Control+Shift+C or F12
+
+FREE TIER...5GB
+
+
+
+
+
+
+
+
+
+
+
+
+

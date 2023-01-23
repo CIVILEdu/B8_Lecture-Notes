@@ -1,0 +1,70 @@
+###### Regions and Availability Zones ######
+AZ is a group of data centers
+Mumbai
+cloudping.info...Latency
+200+ services are available in AWS
+
+If any new service is launched in Asia Pacific, it will be first released in Singapore (2010)
+Mumbai (2016)
+
+N. Virgina is the first region that is launched by AWS (2006)
+N.Virginia has 6 AZs (highest) (us-east-1a/1b/1c/1d/1e/1f)
+Osaca is the smallest region with 1 AZ
+Mumbai has 3 AZs (ap-south-1a/1b/1c)
+China is having a dedicated region. No other regions can access China region.
+
+Each AZ is interconnected with eachother.
+Inside the AZ, we have the Data Centers (Server rooms, server facilities....)
+
+1DC...1Crore Servers...Power supply, cooling system and the security of DCs is a vital case
+Each AZ will be at a distance of 100 km* radius
+
+Mumbai...3AZs...Natural Disasters (Earthquakes, Tsunamis...)
+AZs...DCs...Data of Customers
+
+Laptop...Heat...
+
+###Simple Storage Service (S3)###
+S3 was launched in the year 2006 (second service that was launched by AWS)
+SQS (2004)
+S3 is used to Store the data
+In S3...Bucket (Folder)...Objects (Files)
+
+Mobile (128 GB)...5 Years...All the storage capacity is exhausted... Avatar (1.5 GB)
+	1. Delete the files that are already available (Data loss)
+	2. Back-up of the files (Pendrive) (Security)
+	3. Upload the files into Google Drive, if you dont have the physical drives...CLOUD..15 GB  (Limitation of 		Storage)
+
+AWS..S3..without any limitation to the storage capacity (O Bytes to Peta Bytes)...SCALABILITY
+The data stored in AWS-S3 is safe and secure...AVAILABILITY
+	AZs...All our data gets stored
+	Mumbai...3 AZs... AZ-1... Natural Disaster (Earthquake)
+	Everytime whenever an object is uploaded into the S3 Bucket, each file will have 3 copies
+
+INTERNET ACCESS is mandatory
+LATENCY..Speed of functioning
+
+FREE TIER Account...5GB is the limit
+Extra GB will be charged in FREE TIER account
+
+Maximum size of one S3 Bucket is 5TB
+You can have 100 Buckets for each AWS Account
+
+To create a bucket in AWS-S3, we have 3 ways/options
+	1. S3 Console
+	2. CLI (Command Line Interface)
+	3. SDK (Software Development Kit)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
