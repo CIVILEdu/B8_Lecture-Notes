@@ -1,0 +1,56 @@
+#########
+Day 6
+#########
+
+To access AWS, we have 3 options:
+1. Login to the AWS Account using the console
+2. Login to the AWS Account using the CLI (Command Line Interface) - Command Prompt
+3. Login to the AWS Account using SDK (Software Development Kit)
+
+Server Access Logging (SAL)
+When you want to know the details of the activities that are happening in a specific bucket, we will use SAL
+SAL is used to track a bucket
+The tracking details of a bucket can be stored in the same bucket or a different bucket
+
+Bucket 1: upload, download, delete,....
+
+Tasks:
+Create 2 buckets
+B1: Store the tracking details (LOG BUCKET)
+B2: activity bucket
+
+
+
+5...S3...create, download, delete.....P1 has deleted the file
+
+
+S3 Requester Pays
+
+Bucket...10 GB Files
+
+Project...Dev, Testing, Analysis....
+Dev creates a bucket....Dev uploads the code into the bucket (10GB)...1000 Rs
+Testing...test the code...
+
+Project...Comp.1 & Comp.2
+Comp.1 is to develop the code
+
+Comp.2 will test the code
+The requester must be authenticated by AWS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
