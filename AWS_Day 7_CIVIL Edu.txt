@@ -1,0 +1,56 @@
+#############
+S3 Security
+#############
+1. Encryption at rest
+	1.1 SSE-S3
+	1.2. SSE-KMS
+	1.3. SSE-CMK
+	1.4. CSE
+2. Access permissions
+	2.1 Bucket policy
+	2.2 ACL
+		2.2.1 ACL at bucket level
+		2.2.2 ACL at object level
+	2.3 Presigned URLs
+
+#############
+Bucket Policy
+#############
+
+Bucket policy will work at bucket level
+Bucket policy is used to share the data at account level i.e between two different accounts (Bucket level)
+The bucket policy will be available in JSON Format
+JSON Format can written either by AWS or by the customer
+
+JSON Format/Syntax
+
+JSON Format/Syntax:
+{
+	"Version:"
+	"Statement:"
+						[
+						"Effect:" Allow/Deny
+						"Action:" Data upload, data download, bucket creation, bucket deletion.....
+						"Principal:" To whom we are trying to give the access (IAM User or Another account or                    open to anyone)
+						"Resource:"	We will define whether to give the access to a bucket or to a specific object					
+						]
+}
+
+Pre-signed URLs:
+Movie ticket booking...Select seats (2)...amount has to be paid...direct you to new page (Phone Pe, Google Pay, Pay Pal...)...within 5 minutes, please complete the payment..if you try to do the payment after the specified time, you will be seeing "error" or "page expired"
+
+IF we want to give permissions to access an object for a specified amoutn of time, then we will use "Pre-signed URLs"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
