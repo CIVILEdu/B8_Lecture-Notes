@@ -1,0 +1,32 @@
+##########
+Day 8
+##########
+
+Enable ACL
+Block all public access...OFF (Uncheck)
+Specific Object...Object Opitions..Make public using ACL
+
+When you want to make all the objects in a bucket as public, then we will use BUCKET POLICY (JSON Format)
+Bucket Policy applies for all the objects in the bucket.
+
+
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1674784794277",
+    "Statement": [
+        {
+            "Sid": "Stmt1674784786760",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::s3securitydemo-jan27/*"
+        }
+    ]
+}
+
+IAM (Identity and Access Management)...IAM USER...S3FullAccess
+
+Control+Shift+N
+
+
+
