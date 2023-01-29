@@ -1,0 +1,52 @@
+                                                                                 ###########
+                                                                                      Day 10
+                                                                                 ###########
+-------------------------------
+S3 Replication Setup
+-------------------------------
+S3 Bucket...shared with team members...
+If we want to maintain a duplicate copy of original files for security reasons, then we can use Replication Setup.
+
+Types of replication:
+Replication can be made in 3 ways:
+Root User...Main Bucket (Source Bucket).... Duplicate Bucket
+1. Another bucket in the same region and same account
+2. Another bucket in different region and same account
+3. Another bucket in different account (Account A & Account B)
+
+Main Objects (Standard Storage Class).... Duplicate objects (One Zone IA)
+In replication setup, you can store the objects by changing the storage classes
+
+-------------------------------
+S3 Object Lock
+-------------------------------
+It can help you to prevent objects from being deleted or overwritten.
+Additional layer of security to the objects.
+
+Features of S3 Object lock:
+------------------------------------
+1. Retention modes:
+1.1 Governance Mode:
+Root User...created a bucket...uploaded an object...
+In governance mode, root user will have all the permissions to delete the objects.
+
+1.2 Compliance Mode:
+In compliance mode, root user also cannot delete the objects.
+
+2. Retention Period:
+In retention period, you can specify the time limit of objects not getting deleted
+Ex: 7 Days
+Once after the retention period is expired, root user can delete the files
+
+3. Legal holds:
+It prevents an object version from being overwritten or deletion.
+
+
+
+
+
+
+
+
+
+
