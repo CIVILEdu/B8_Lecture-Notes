@@ -1,0 +1,72 @@
+###############
+Day 11
+###############
+
+S3 MFA Delete
+--------------------------
+MFA - Multi Factor Authentication
+Its an additional layer of security to the S3 bucket
+By default, MFA Delete is disabled.
+Bucket (Shared with 5 people)...Uploaded an object... It will not enable the user to delete the objects.
+
+How to enable the MFA Delete?
+	1. CLI (Demo)
+	2. SDK
+	3. API
+
+Note: By using AWS Console, we cannot enable/disable the MFA Delete option
+
+Tasks:
+1. Create a bucket by enabling the versioning.
+2. Enable MFA Delete using CLI
+3. Try to delete it (The object gets deleted.) 
+4. Disable MFA Delete using CLI
+
+Pre-requisite:
+1. Google Authenticator App
+
+
+
+Life Cycle Management
+-------------------------------------
+1. Why this concept is introduced?
+2. Purpose
+3. How the customer gets benefitted with this topic
+4. For which problem statements you can use LCM
+
+AWS Solution Architect (3 Years)
+Client...Some (3) Apps...Generates 100s of files on everyday...Do you have any service where i can store all these 100s of files...I want to host all these Apps on single platform...
+
+As per the clients companies policy, once a file is generated, only for 3 months, they are going to be used by the customers. After 3 months, these files may or maynot be accessed by the customers or the apps may or maynot use these files. For the next 6 months, these files are not used frequently but whenever the client company requires these files, he needs to be accessed. For the next 24 months, files should be there but they maynot need an immediate access to the files.
+
+1. S3
+2. AWS...EC2, SNS, RDS....
+
+
+S3 Event Notifications – SNS
+-----------------------------------------
+Bucket...object creation/deletion...................
+If you want to get the notification of activities that are happening in a bucket, then we can use S3 Event Notification feature.
+SNS - Simple Notification Service (E-mail)
+
+Tasks:
+1. Create a bucket
+2. SNS
+	2.1 Create a topic
+	2.2 Subscription Confirmation
+3. Bucket....Create Event Notification
+4. Upload the object and check for notification in the email
+
+
+
+
+
+
+
+
+
+
+
+
+
+
