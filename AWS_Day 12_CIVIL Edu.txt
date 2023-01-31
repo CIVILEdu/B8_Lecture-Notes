@@ -1,0 +1,71 @@
+										###################
+												Day 12
+										###################
+
+MFA Delete
+-------------------
+MFA Delete is an advanced layer of securing a bucket and the objects inside it.
+MFA Delete cannot work with the AWS Console.
+To enable/disable the MFA Delete option, you have to use etither CLI/SDK/API
+	CLI (Command Line Interface)
+By default, MFA Delete option is Disabled.
+
+Tasks:
+=======
+1. Create a bucket by enabling the Versioning
+	1.1 Check for MFA Delete option in the S3 Console
+2. Activate MFA in IAM Console
+	2.1 Use Google Authenticator App to activate MFA
+	2.2 Create the Access Key and Secret Key (Download the .csv file)
+3. Command Prompt (CLI)
+	3.1 Enable the MFA Delete
+	3.2 Check the MFA Delete in AWS Console
+	3.3 Try to delete an object and observe the change
+	3.4 Disable the MFA Delete
+	3.5 Try to delete an object and observe the change
+
+Access Key: AKIAYOK65KUV3XZ44SUB
+Secret Key: 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
+
+
+S3 Cross Account Access
+------------------------------------
+Account A: demo.bucket ----> aws document
+Account B
+
+Pre-requisite: 2 AWS Accounts
+
+Tasks:
+=======
+Account A (Root Account):
+	1. Create S3 bucket...upload 2 files
+	2. IAM - Create a Role, Create a Policy (Root Policy)
+	3. Copy the ARN of Role created in Account A
+Account B (Another Account):
+	1. IAM - Users --- Add/Create User
+	2. Add inline policy
+	3. We will do the switch role and try to access the files in Account A
+
+Account A ID: 580556510507
+Account B ID: 690215159787
+
+Demo.CAA.Role
+arn:aws:iam::580556510507:role/Demo.CAA.Role
+https://signin.aws.amazon.com/switchrole?roleName=Demo.CAA.Role&account=580556510507
+
+
+User name in account B: user111.demo.accountb
+
+
+
+
+
+S3 Inventory Configurations – Concept and Hands-on
+-----------------------------------------------------------------------
+To get the detailed activities that are performed in a specific bucket, you can use Inventory Configurations
+
+
+
+
+
+
