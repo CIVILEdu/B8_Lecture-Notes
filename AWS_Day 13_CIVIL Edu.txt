@@ -1,0 +1,43 @@
+												##########
+												    Day 13
+												##########
+S3 Access Points:
+---------------------------
+1. Create a S3 Bucket
+	Create 3 subfolders (Finance Team, Sales Team, Analytics Team)
+2. Create IAM Users
+	Create 3 IAM Users
+		Create Policy (S3FullAccess)
+3. Bucket --- Bucket Policy
+4. Bucket --- Create Access Points
+5. Open another browser ---> Login as IAM User and check the permissions by accessing through ACCESS POINTS ONLY
+
+User name: user111-financeteam
+Policy Name: user111-app
+https://580556510507.signin.aws.amazon.com/console
+user111-financeteam
+
+
+user111-financeteam-accesspoint
+
+
+
+
+https://580556510507.signin.aws.amazon.com/console
+user222-salesteam
+
+
+S3 Multipart Upload:
+-------------------------------
+Upload a file in AWS - we use S3 service
+100 MB...S3 Bucket...The 100 MB will be divided into multiple parts which are called as "Chunks"
+
+
+
+
+
+
+
+
+
+
