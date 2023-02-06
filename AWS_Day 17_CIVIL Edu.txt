@@ -1,0 +1,65 @@
+									##################
+											Day 17
+									##################
+Amazon Machine Image (AMI):
+----------------------------------------------
+1. Create AMI from EC2 Instance
+Tasks:
+******
+1. Create the Instance
+2. Connect to the instance (MobaXTerm, Putty & Putty Gen, and EC2 Instance Connect option)
+	2.1 Install a software (Nginx)
+			Command for installing the NGINX Software: sudo amazon-linux-extras install nginx1
+	2.2 Install a software (Git)
+			Command for installing the GIT Software: yum install git
+3. Create the AMI
+
+Created Instance (GIT & Nignx)....Created the AMI...Now, whenever you want to launch the instance using AMI by default those instances will have GIT & Nignx Softwares
+===========================================================================
+2. Create EC2 Instance from AMI
+Tasks:
+******
+1.Using the AMI created in porevious case, we will launch the instance
+2.Verify for GIT and Nginx Softwares in the newly created instance using AMI
+===========================================================================
+3. Automating Start and Stop of EC2 Instance
+
+Services used:
+	Cloud Watch
+	SSM Document
+Tasks:
+*************
+1. IAM Role with SSM Permission (AWS Systems Manager)
+2. Launch EC2 Instance using the IAM Role Created
+3. Cloud Watch - is a service which is used for Monitoring any service available in AWS
+
+===========================================================================
+4. How to attach an Elastic IP to running EC2 Instance:
+Launch the EC2 Instance (Elastic Instance)...Public IP 100.100.100.100
+At 6.00 PM, Elastic Instance..I have to stop it...
+At 9.00 AM, Elastic Instance..I have to restrart it...Public IP 100.109.101.102
+
+Public IP:
+The public IP gets changed everytime when you stop the instance and re-start the same ec2 instance.
+Elastic IP:
+To maintain the single IP address for the same instance for a longer duration of time, we can attach the Elastic IP for the instance.
+
+
+
+18.136.196.106
+18.138.250.151
+
+
+Elastic IP: 18.141.132.239
+Instance IP: 18.141.132.239
+
+
+
+
+
+
+
+
+
+
+
