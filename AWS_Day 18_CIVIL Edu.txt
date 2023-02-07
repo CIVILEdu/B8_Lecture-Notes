@@ -1,0 +1,60 @@
+									#########################
+												Day 18
+									#########################
+How to connect to EC2 Instance when key pair is lost
+-----------------------------------------------------------------------
+Tasks:
+*******
+1. Create Instance. Take the "snapshot" of instance by using EBS Volume.
+2. Create the AMI by using the Snapshot.
+3. Create new EC2 Instance by using AMI, and create a new keypair to login to the instance.
+4. Login to the newly created instance with the new keypair
+==========================================================================
+How to SSH from one EC2 Instance to the other EC2 Instance
+---------------------------------------------------------------------------------
+Tasks:
+*******
+1. Create 2 Instances 
+	1.1 Public Instance (Assign the Public IP)
+	1.2 Private Instance (Disable the Public IP)
+==========================================================================
+How to Connect to EC2 Instance using AWS Sessions Manager
+---------------------------------------------------------------------------------
+Tasks:
+*******
+1. Launch the instance
+2. Create IAM Role
+3. Attach the IAM Role to the instance created in Step 1
+
+Advantages of login to the instance using Sessions Manager:
+1. No ports are to be allowed in SG
+2. You can run instances in the Private Subnets
+3. No need of SSH Keys (Keypairs)
+
+==========================================================================
+Migrate EC2 Instance from Root Account to Other Account
+---------------------------------------------------------------------------------
+Tasks:
+*******
+Root Account A
+^^^^^^^^^^^^^^^^^
+1. Create EC2 Instance
+2. Create the AMI
+3. Modify the permissions in AMI to add instance to another account
+
+Note: The region of the EC2 Instance in Main Account should be the same in other account also.
+==========================================================================
+
+
+Hosting Wordpress Blog on EC2 Instance
+---------------------------------------------------------------------------------
+Tasks:
+*******
+1. Create the Instance
+	1.1 AMIs: Wordpress
+2. Connect to the Instance
+3. Wordpress Blog - Sample Page
+4. Login to the Wordpress Blog
+	4.1 Look for Login ID and Password in the logs which is inside ############
+
+
