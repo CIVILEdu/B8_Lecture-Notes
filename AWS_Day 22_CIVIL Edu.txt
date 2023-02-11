@@ -1,0 +1,73 @@
+						####################################################
+												Day 22
+						####################################################
+Elastic Block Storage:
+-------------------------------
+1. Whenever you create an EC2 Instance, by default an EBS volume will be attached to the instance.
+2. Whatever the data i.e related to instance will be stored in the EBS Volume (Software, OS, html....)
+3. For any EC2 instance, we can attach mutliple types of storage devices (EBS/FSx/S3)
+4. EC2 and EBS are independent. Whenever you want an additional EBS volume, you dont need to create an instance)
+5. EC2 and EBS are connected using a network.
+6. When we want persistant storage, then we will use EBS.
+	Instance Store: is called as temporary storage
+7. EC2 and EBS are independent - even if the server is stopped and restarted, the data available in EBS volume wont get deleted. Hence it is called as 'Persistant Storage'
+8. For one instance, a total of 16 EBS volumes can be attached.
+9. For one instance, we can store upto 16 TB of data (Max. storage capacity of EBS volume is 64 TB)
+10. For one EBS Volume, we can attach multiple EC2 Instances
+	- The feature of attaching one EBS volume to multiple instances is called as "EBS Multi Attach"
+11. Hypervisors: Nitro, Xen
+	The limitation of EBS is, the EC2 Instances which are running on NITRO HYPERVISOR only for that type of 	instances we can attach multiple EC2 Instance for one EBS Volume.
+12. AZ - If an EBS Volume is created in any AZ, a clone/copy will be created by AWS.
+	If original EBS volume is lost, Clone 1 will create Clone 2, and the data available in Clone 1 will be copied to 	Clone 2 and hence the data is safe and persistant.
+
+
+Types of EBS Volumes:
+1. SSD Type (Better performance)
+2. HDD Type (Slow performance)
+3. Previous Generations (it is outdated)
+
+SSD & HDD Types of EBS Volumes:
+--------------------------------------------------
+1. Whenever the data is being accessed frequently, then we will store such data in the SSD Type.
+2. SSD is majorly used when we have less data which is used frequently.
+3. SSD functions based on IOPS (Input Output Per Second)
+4. HDD is used when we have large data but it is accessed for less no. of times
+5. HDD functions based on 'Throughtput' method (MBPS/GBPS)
+	-HDD is used in Big Data Analytics
+
+Types of SSD:
+1. General Purpose
+2. Provisioned IOPS
+
+1. Whene there is a normal usage of EBS volume, then we will select GENERAL PURPOSE instance type.
+2. When there is a rapid access of data needs to be done, then we select PROVISIONED IOPS.
+3. In general, whenever we are launching an EC2 Instance, by default AWS Provides "General Purpose."
+4. General Purpose is of 2 types: 
+		1. GP2
+		2. GP3
+5. Provisioned IOPS is of 3 types:
+		1. io1
+		2. io2
+		3. io2 Block Express (Supported by R5B type of Instances)
+
+Note: EBS Multiattach is supported only in SSD type and in particularly it is supported on Provisioned IOPS, only for Nitro Based Instances.
+
+Snapshots
+-------------------------------
+1. The backup of EC2 instance can be taken using AMI
+2. EC2----EBS Volume...How will you take the backup of EBS volume?
+	- SNAPSHOTS
+3. The difference between the backup and snapshot is, in volume the data is stored in Harddisk, but in snapshot the data is stored in Cold Format.
+4. EC2 Console---Snapshots (Leftpane)
+5. In backend, the snapshots are stored in the S3 buckets of your account. But the buckets in which snapshots are stored cannot be seen in our account. These kind of buckets are called as "Opaque Buckets"
+6. Snapshot is applicable only for EBS volumes.
+7. If you want to take the backup of EC2 instance, then we use AMI.
+
+
+
+
+
+
+
+
+
