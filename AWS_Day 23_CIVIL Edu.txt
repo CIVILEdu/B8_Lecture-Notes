@@ -1,0 +1,66 @@
+**************************************************************************************************
+												Day 23
+**************************************************************************************************
+EBS - Concept
+----------------------
+Elastic Block Storage
+EC2...EBS Volume
+EBS Volume will act as a container for the data to store in the EC2 Instance
+By default, whenever we delete/terminate an EC2 Instance, all the data in the EBS Volume will also get deleted.
+Whenever an EC2 Instance is being created, you will have to choose the size of EBS Volume.
+	Case 1: I have created an EBS volume of 8 GB Size, which is attached to the instance.
+				Can you increase/decrease the size of an EBS Volume?? YES (Resizing the EBS Volume)
+	Case 2: I have created an EBS volume of 8 GB Size, which is attached to the instance 1.
+				Can you detach an EBS volume from one instance and attach to the other instance.
+						YES. You can do the ATTACH & DETACH of EBS Volumes.
+
+Demo 1
+-----------------
+1. Create an EC2 Instance & Attach the default EBS Volume (Type: gp2, Size: 8GB)
+2. Observe the behavior of EBS volume by terminating the instance
+3. Lets protect the EBS Volume against deletion, eventhough the instance gets terminated
+		Storage ... Advanced ... Delete on Termination ... Select YES from dropdown
+4. Modify the size of EBS Volume
+		8GB Size....100 GB
+		Volumes (Leftpane) ... Check the volume  ... Actions ... Modify Volume ... Here you can change the size... 			Modify
+5. Modify the type of EBS Volume (gp2, gp3, io1,io2, io2 blockexpress...)
+		Volumes (Leftpane) ... Check the volume  ... Actions ... Modify Volume ... Here you can change the type... 			Modify
+6. Create a snapshot of EBS Volume
+		"Snapshot": is a back-up of EBS Volume
+		"AMI": is also a back-up of EC2 Instance
+		Volumes (Leftpane) ... Check the volume  ... Actions ... Create Snapshot ... Create Snapshot 		
+
+
+How to attach new EBS Volume to an existing EC2 Instance
+-------------------------------------------------------------------------------
+1. Create the Instance (which has 4 EBS Volumes attached) (8GB, 130 GB, 140 GB, 8GB)
+2. Volumes (leftpane) ... Create a new volume (600 GB)
+3. Attach the new volume to the existing Instance
+		Volumes (leftpane) ... Create a new volume (with required configurations) ... Check the volume ... 				Actions ... Attach Volume ... Select the Instance for which you want to attach the newly created volume ... 		Attach Volume
+4. Detach the volume from the existing instance
+	Volumes (leftpane) ... Check the volume ... Actions ... Detach Volume ... Detach
+
+EBS MultiAttach
+--------------------------
+1. Create 2 Instances (Must be in the same AZ)
+Note: The multi-attach feature is available only for io1 and io2 types of volume
+2. Create new EBS Volume with io1 or io2 as EBS Volume type.
+Note: The newly created EBS Volume should also be in the same AZ, as of the instance
+3. While creating the new EBS Volume, check EBS MultiAttach option
+Point to Remember: 16 Instances can be associated to 1 EBS Volume
+4. If you want to work with EBS MultiAttach, we need to change the 'Type of Instance' from t2.micro to t3.micro
+	4.1  First STOP the instances
+	4.2 Check the instance 1 ... Actions ... Instance Settings ... Change Instance Type ... Select t3.micro from 			dropdown and Chage the instance type. Restart the instance
+	4.3 Repeate the same process for Instance 2 also
+5. Attach the EBS Volume to Instance 1 and Instance 2
+6.  Do the configuration to the instances, to work with EBS MultiAttach
+
+
+
+
+
+
+
+
+
+
