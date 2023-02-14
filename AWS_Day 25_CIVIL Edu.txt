@@ -1,0 +1,72 @@
+#############################################################################################
+												Day 25
+#############################################################################################
+1. EC2 + CloudWatch + SNS Integration
+--------------------------------------------------------
+SNS - Simple Notification Service
+Other services available in AWS for notifications: SES, SQS
+
+Tasks:
+======
+1. Create an SNS Topic with Email Notification
+2. Create an EC2 Instance
+3. Create a CloudWatch Alarm 
+		(If given threshold (CPU >= 5%) reaches, trigger Alarm)
+		(Once the Alarm is triggered, the CloudWatch Alarm should send the notification by using SNS)
+3. Attach CloudWatch to the EC2 Instance
+4. Increase the load on EC2 instance using a command "stress"
+5. Observe the behaviour of CoudWatch/Alarm/SNS/Email
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+AWS LightSail:
+---------------------
+--> To launch an EC2 Instance, we need VPC, EBS.
+--> To connect to an EC2 Instance, we need Putty/PuttyGen, MobaXTerm, EC2 Instance Connect
+--> To avoid complication for beginners, LIGHTSAIL is available.
+--> In LightSail we can create servers, DB, Networking
+--> LightSail is the simplest way of create a server, DB, Networking
+--> One Month free
+--> LightSail services are mostly used for Dev & Test Environments
+--> OS in LightSail : Linux, Windows
+--> Servers available in LightSail: LAMP, LEMP, MEAN, Drupal
+
+
+Lightsail...Create Instance...Click on the three vertical dots to connect to the instance...A new tab opens...
+Lets setup a simple website:
+sudo -i
+yum install httpd -y (a httpd site gets installed and a welcome page will appear)
+service httpd start
+vim /var/www/html/index.html
+Press "i" keyboard to enter ito Insert state
+Type some data: Welcome to AWS & DevOps Training by CIVIL Edu
+Press "escape"
+type   :wq!
+
+Now goto lightsail  console and copy the Public IPV4 and paste in new ta... you will see the data entered in the index.html page (Welcome to AWS & DevOps Training by CIVIL Edu)
+
+Terminate the lightsail instance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
