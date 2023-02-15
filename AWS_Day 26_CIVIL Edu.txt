@@ -1,0 +1,50 @@
+#############################################################################################
+											Day 26
+#############################################################################################
+IAM - Identity and Access Management
+~ IAM is FREE for lifelong.
+~ The 2 different aspects of IAM are: 1. Authentication 2. Autherization
+~ Identity is nothing but the Authentication. To provide authentication to AWS Account, Identity is very important.
+~ User ... EMail ID & Password ... The User will get the complete access to the Account (FB/Gmail/Instgram)
+~ But in AWS, Identity is just to log-in to the AWS Account. To use the AWS Services, we need Access, which is called as Autherization.
+~ The username and password in AWS are called as ROOT CREDENTIALS and the user who is entering the ROOT CREDENTIALS is called as ROOT USER. 
+		- Root user will have the complete access to the AWS Services
+~ We cannot share the root user credentials to everyone. AWS suggests its users to create an USER and with that user we have to access AWS Account/Services.
+		- IAM USER
+Features of Identity in IAM
+------------------------------------
+1. IAM User
+2. IAM Role
+
+~ If you want to give access to other people working in the team, the TEAM LEAD cannot share the ROOT CREDENTIALS. Instead, the team lead will create IAM User or IAM Role for all the team members with specific permissions.
+~ Each IAM User will have separate login credentials.
+~ DB Team ... 20 Members ... Create IAM Users
+~ IAM Users can login to AWS account using three different options
+		1. AWS Console 2. CLI/SDK (Programmatic Methods)
+						In the programmatic methods, the IAM User has to enter the Access Key and Secret Key.
+~ Root user will have the permission to manage the access to AWS Account either by AWS Console or by CLI/SDK methods.
+			NOW IAM USER CAN LOGIN TO YOUR AWS ACCOUNT
+~ AUTHERIZATION to IAM User can be given using IAM Policy
+~ In IAM Policy, we can specify the type of permissions that we want to give to IAM User
+~ Types of IAM Policies:
+		1. AWS Managed Policies 2. Customer Managed Policies
+~ IAM Policies are available in "json" format
+~ If you want to club all the members in a team, we can create IAM GROUPS and then we can add all the team members in that Group. Once if we give the permissions to the group, automatically the permissions will be applicable to all the members available in that group.
+
+Summary:
+1. IAM Users
+2. IAM Roles
+3. IAM Policies
+4. IAM Groups
+
+
+
+
+
+
+
+
+
+
+
+
