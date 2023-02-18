@@ -1,0 +1,40 @@
+#############################################################################################
+												Day 28
+#############################################################################################
+IAM Roles
+----------------
+Tasks:
+1. How to create IAM Roles and how to attach policies
+2. Cross account access role
+3. Switch Role - How this works
+
+IAM Roles:
+IAM Roles are of two types:
+1. Service based roles
+2. Account based roles
+
+IAM Groups
+-------------------
+1. How to create IAM Groups
+2. How to add IAM Users to the IAM Group
+
+
+
+IAM Permission Boundaries
+---------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
