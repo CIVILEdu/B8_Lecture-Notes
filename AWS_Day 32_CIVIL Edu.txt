@@ -1,0 +1,60 @@
+#############################################################################################
+												Day 32
+#############################################################################################
+Bastion Hosts:
+---------------------------
+A bastion host is a server whose purpose is to provide access to a private network from an external network.
+bastion host will have a separate SG, which is called as Bastion Host SG.
+We can use bastion hosts to SSH into our private EC2 instances.
+
+Rename the Demo VPC Instance to "Bastion Host"......Launch one EC2 Instance in a Private Subnet A......Name the instance that is launched in Private Subnet A as "Private Instance." While launching the Private Instance, name the SG as Private SG.
+To connect to the private instance, we have to do the SSH through the Bastion Host
+
+Connect to the Bastion Host instance using EC2 Instance Connect option......EC2 logo will appear......Lets try to connect to Private Instance using Bastion Host instance...... ssh ec2-user@entertheprivateIPofPrivateInstance......Yes......we have to sepecify the keypair......nano <enterKeyPairName Ex:Singapore_KP.pem>paste the Keypair......Control + X......Yes......ssh ec2-user@<enterPrivateIPofPrivateInstance>......You will see a warning message as Unprotected......chmod 0400 <enterkeypairname>......ssh ec2-user@<enterPrivateIPofPrivateInstance -i <enterkeypairname>......You will see EC2 logo......As of now what we have done is we have connected to the Private Instance. We have connected using Bastion Host into the Private Instance......ping google.com......You will not see any data. It is because private instance doesnt have internet access outgoing. 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+NAT Instance: this is outdate concept
+NAT Gateway:
+-----------------------
+~ NATGW is created in a specific AZ, it uses an Elastic IP
+~ NATGW can only be helpful if accessed from another subnet
+~ We are going to create a NATGW in a public subnet and connect to the instances in a private subnet
+~ NATGW requires IGW
+~ SG are not required
+
+Demo of NATGW:
+Route Tables.....Open the Private Route Table.....Routes.....You will see the Status as "Active"
+NATGW (leftpane).....Create NATGW
+Route Table....Work with Private Route Table
+
+Check Private Instance.....Connect.....EC2 Instance Connect.....Connect....You will see EC2 Logo.....ping google.com.....Now you will see the data getting executed.
+
+23rd.. VPC Peering
+24th.. Route 53
+25th.. We will work on a real-time project using AWS Services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Private Instance will not have the Public IP, it will have only the Private IP

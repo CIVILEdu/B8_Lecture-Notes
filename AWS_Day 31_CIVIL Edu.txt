@@ -1,0 +1,95 @@
+###########################################################################################
+												Day 31
+###########################################################################################
+
+Before the emerging of Cloud Computing how a networking used to be there in an organization:
+
+LAN:
+Local Area Network
+LAN is used to connect theservers located in a single city/single area
+
+MAN:
+Metro Area Network
+MAN is used to connect the servers located in a single city but in multiple locations
+
+WAN:
+Wide Area Network
+WAN is used to connect the servers located in different locations or different cities
+
+To create a VM (EC2 Instance), we need EC2, EBS, VPC
+To create a VPC, we have to create a network
+Depending upon the use the network is splitted into different parts, which are called as SUBNETS
+
+
+IP Addressing:
+
+To connect  one device with another device...IP Address is required.
+IP - Internet Protocol
+To connect one system with another system available in the same location, we will use LAN connection.
+		LAN - It uses the Private IP
+If two systems are to be connected without using LAN, then Public IP has to be used.
+
+Types of IP addresses:
+1. IPv4
+32 bits
+4 parts
+101.100.100.100
+
+2. IPv6
+128 bits
+6 parts
+alpha numeric characters
+
+IPv4 consists of 4 octets
+Each octet contains 8 bits
+
+Ex: 4x8 = 32 bits
+
+If we give Ip range as /16,
+2^32-16 = 2^16 = 65536 IPs
+
+/32
+2^32-32 = 2^0 = 1 IP
+
+/30
+2^32-30 = 2^2 = 4 IPs
+
+/29
+2^32-29 = 2^3 = 8 IPs
+
+0.0.0.0 to 255.255.255.255
+
+Different types of IPs:
+1. Public IP
+2. Private IP
+3. Elastic IP
+
+Terminology in VPC:
+Subnets (Public Subnet & Private Subnet)
+Internet Gateway
+Route Tables
+NAT Gateway
+	is used to restrict incoming traffic and allow outgoing traffic
+	NAT Gateway will; have ingress and aggress
+NACL
+Network Access Control List
+SG
+Security Groups
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VPC:
+

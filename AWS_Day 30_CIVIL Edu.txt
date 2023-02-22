@@ -1,0 +1,89 @@
+#############################################################################################
+												Day 31
+#############################################################################################
+1. Public IP Vs. Private IP
+2. Default VPC
+3. VPC - Concept
+4. VPC - Creation
+5. Subnets - Concept & Creation
+6. Internet Gateway & Route Tables - Concept & Creation
+-----------------------------------------------------------------------------------------------------------------------------------
+1. Public IP Vs. Private IP:
+IANA - Internet Assigned Numbers Authority established certain blocks of IPv4 addressess for the use of Private (LAN) and Public (Internet) address.
+Private IP can allow only certain range of IPs
+	10.0.0.0 to 10.255.255.255 (10.0.0.0/8) ----- Used in big networks
+	172.16.0.0 to 172.31.255.255 (172.16.0.0/12) ----- AWS default VPC range
+	192.168.0.0 to 192.168.255.255 (192.168.0.0/16) ----- Home Networks
+All the rest of the IPs are called as Public IPs
+In IPv6 all IPs are Public
+In IPv4 we have both public and private
+-----------------------------------------------------------------------------------------------------------------------------------
+2. Default VPC:
+Default VPC gets created after creating the AWS Account. All new AWS Accounts will have a default VPC.
+New EC2 Instances will be launched in the default VPC only.
+Default VPC has internet connectivity and all EC2 instances inside it have Public IPv4 Addresses.
+Dont delete the default VPC.
+CIDR of default VPC is 172.31.0.0/16
+-----------------------------------------------------------------------------------------------------------------------------------
+3. VPC
+~ You can have upto 5 VPCs per region
+~ Max CIDR per VPC is 5, for each CIDR
+	Min Size is /28 (16 IPs)
+	Max Size is /16 (65,536 IPs)
+Because VPC is private, only the private IPv4 ranges are allowed
+		10.0.0.0 to 10.255.255.255 (10.0.0.0/8) ----- Used in big networks
+		172.16.0.0 to 172.31.255.255 (172.16.0.0/12) ----- AWS default VPC range
+		192.168.0.0 to 192.168.255.255 (192.168.0.0/16) ----- Home Networks
+-----------------------------------------------------------------------------------------------------------------------------------
+4. VPC - Hands-on
+You can have upto 5 IPv4 CIDRs for a single VPC
+10.0.0.0/16
+Once VPC is created (Demo VPC), AWS Creates a Route Table for the VPC we have created.
+Whatever the Subnets we are going to create now within this VPC, they all will be part of this Route Tables
+-----------------------------------------------------------------------------------------------------------------------------------
+5. Subnet
+~ Subnet is logical partitioning of a network into smaller IP ranges
+~ A Subnet is a subrange of IPv4 addresses in a VPC
+~ AWS reserves 5 IP addresses in each subnet (first 4 and last 1)
+~ These 5 IPs are not available for use and they cannot be assigned to an EC2 Instance
+Ex: If CIDR block range is 10.0.0.0/24, then reserved IP addressess are
+	10.0.0.0 - Network Address
+	10.0.0.1 - Reserved by AWS for VPC Router
+	10.0.0.2	- Reserved by AWS for mapping to Amazon provided DNS
+	10.0.0.3	- Reserved by AWS for future use
+	10.0.0.255 - Network Broadcast Addresss. AWS doesnt support broadcast in a VPC, therefore address is reserved
+
+Note: If you need 29 IPs for EC2 instances
+	You cannot choose a size of /27 (32 IPs, 32-5 = 27 < 29)
+	You need to choose a subnet of size /26 (64 IPs, 64-5 = 59 >29)
+-----------------------------------------------------------------------------------------------------------------------------------
+6. Subnets - Hands-on
+We are going to create 4 subnets (2 Public Subnets and 2 Private Subnets)
+-----------------------------------------------------------------------------------------------------------------------------------
+7. Internet Gateway & Route Tables
+~ IGW allows resources in a VPC to connect to the Internet.
+~ It scales horizonatally and it is highly available and redundant
+~ IGW must be created seperately from a VPC
+~ One VPC can only be attached to one IGW and viceversa
+~ IGW on their own do not allow the Internet Access
+~ Route Table must also be created to make it work
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
