@@ -1,0 +1,139 @@
+AWS Services Covered:
+-----------------------------------
+Introduction to Cloud Computing
+Certifications
+IaaS, PaaS, SaaS
+Cloud Models
+----------------------
+S3
+----------------------
+EC2
+----------------------
+Elastic Block Storage
+Elastic Load Balancer (ALB, NLB)
+----------------------
+IAM
+----------------------
+VPC
+----------------------
+Route 53
+----------------------
+KMS
+----------------------
+CloudWatch
+----------------------
+SNS
+----------------------
+Lightsail
+----------------------
+Elastic Beanstalk
+
+
+#############################################################################################
+										DevOps - Day 1
+#############################################################################################
+~ DevOps = Development Team + IT Operations Teams
+
+~ For any project, there will be a development team and operations team.
+
+~ Client...To launch a website (Ecommerce, banking...)... App and Website
+
+~ Programmers will write the code according to the requirements of the client.
+
+~ The code that is written by the programmers will undergo a series of 'process' before handling it to the client.
+
+~ Along with the Programmers/Developers we also have the Operations Team or IT Team.
+
+~ DevOps culture has started in the IT Industry in the year 2007.
+
+~ Development team activities:
+	- Understand the client requirements
+	- Based on the requirements of the client, developers will develop the project (Coding)
+	- Test the programs (Codes)
+	- Development will keep the code into repository
+
+~ IT Operations team activities: (Infrastructure Setup)
+	- Take the code from the repository.
+	- Setting up of Servers/VMs (EC2 Instances)
+	- Setup Databases (RDS)
+	- Build the Code and Package the Code
+	- Deploy into the Servers (EC2 Instances)
+	- Deliver the project to the client
+
+~ By adopting yhe DevOps culture we can deliver the projects quickly.
+
+~ DevOps is a process/culture/set of practices
+
+~ Once the infrastructure setup is ready, operations team will have to take the code from the repository - GIT & GITHUB
+
+~ After taking the code from repo., as an IT Operations Engineer, you need to perform the Build & Package, where code should be packaged as a JAR file or WAR file - Build Tool - MAVEN
+
+~ The code will be reviewed / tested for bugs after packaging - SONARQUBE
+
+~ After this, the operations team will deploy the code into the servers - JENKINS, DOCKER, KUBERNETES
+
+~ After the final deployment process, the project will be delivered to the Client.
+
+~ In order to automate the delivery process of a project, we (DevOps) are going to use tools like, Build Tools, Repository Tools, CI-CD Tools, Containarization Tools, Archestration Tools, Code Review Tools
+
+Life Cycle / SDLC - Software Development Life Cycle:
+---------------------------------------------------------------------------------
+
+~ SDLC is the process of developing and delivering a software project to the client.
+
+~ Phases of SDLC:
+	- Requirement Gatherings, Requirement Analysis, Design/Planning, Coding/Implementation, Testing, 	 	  	Deployment, Deliver to the client, Maintanance.
+
+Methodologies to develop a project:
+--------------------------------------------------
+
+1. Waterfall Model (Linear process, Budget and requirements are fixed, client involvement is very less)
+2. Agile Model (Sprint process, Budget and requirements are not fixed, client involvement is very high)
+
+Usign DevOps culture, we can achieve the CI & CD (Continuous Integration and Continuous Delivery)
+CI CD can be achieved using the Agile Methodology.
+
+DevOps Tools - Overview:
+--------------------------------------
+In order to collaborate development team and the operations teams we are going to use some tools;
+1. Build Tools - Ant, Gradle, MAVEN
+2. Repository Tools - SVN, "GIT, GITHUB," Bit Bucket
+3. Code Review Tools - Sonar Link, PMD, "SONAR QUBE"
+4. Code Deployment Tools - UDeploy, JENKINS
+5. Configuration Tools - Chef, ANSIBLE
+6. Containarization Tool - DOCKER
+7. Orchestration Tool - Kubernetes
+8. Monitoring Tools - Nagios, Promethous, ELK, "GRAFANA"
+9. Project Management Tool - JIRA
+
+
+**************************************************************************************************
+												By
+											Kastro Kiran V
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
