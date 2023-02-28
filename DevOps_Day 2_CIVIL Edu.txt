@@ -1,0 +1,44 @@
+#############################################################################################
+										DevOps - Day 2
+#############################################################################################
+Understanding the DevOps Culture – Build & Deployment Process
+-------------------------------------------------------------------------------------------
+~ For any project we will have the Dev Team and Ops Team.
+~ Dev Team will write the code in different/same programming languages (Python, .net, Java)
+~ In order to build/develop the application, we need to create a project folder structure. The project folder structure will be created by using a tool called as MAVEN.
+~ In MAVEN, we will download all the dependencies that are required to fully develop the project.
+~ Using MAVEN, developers will create the project, download the dependencies, compile the project, unit test execution, packaging the code (JAR or WAR files)
+~ Once the above process is done, all the developers code will be stored in one common platfrm known as GIT & GIITHUB (GIT Repository).
+~ All the developers will be connected to the common GIT Repository and then they are going to PUSH the code into the repo.PROJECT SOURCE CODE.
+~ Now, as a DevOps Engineers, we need to perform the BUILD & DEPLOYMENT process.
+~ To perform the BUILD & DEPLOYMENT process, we are going to use JENKINS, which is the heart of the DevOps.
+~ We can perform CI&CD using JENKINS.
+~ Taking the code from repository and deploying that code into the servers is called as DEVOPS OPERATIONS.
+~ Taking the code from repository and keeping the code into the servers is called as DEPLOYMENT.
+~ JENKINS will be integrated with GIT Repo. to get the source code.
+~ Then JENKINS will interact with MAVEN to compile the code and code will be packaged as a JAR or WAR file.
+~ JENKINS will also be integrated with SONARQUBE to test/perform the code quality analysis.
+~ The configuration will then be done to the application using ANSIBLE.
+~ Now the Application will go LIVE.
+This entire process is called as BUILD & DEPLOYMENT.
+~ We can also achieve the CI&CD using JENKINS
+
+_____________________________________________________________________________________________
+												By
+											Kastro Kiran V
+								To join our next batch, contact 9700712459
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
