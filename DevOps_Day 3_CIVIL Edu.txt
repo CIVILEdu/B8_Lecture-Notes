@@ -1,0 +1,120 @@
+#############################################################################################
+										DevOps - Day 3
+#############################################################################################
+Operating System (OS)
+--------------------------------
+~ OS is a software which is used to interact with the computer.
+
+~ OS will act as a mediator between the users and the computer hardware components.
+
+~ OS Types: Windows, Vista, Linux, Mac OS....
+
+~ OS is mandatory for any computer to work with.
+
+~ OS provides an environment to run the applications.
+
+Windows OS:
+------------------
+~ It is a single user based OS
+~ Developed by Microsoft 
+~ Paid OS
+~ Windows OS is suggested purely for personal use
+~ It is based on GUI
+
+Linux OS:
+------------------
+~ It is a multi user based OS
+~ Developed by Linus Torvalds
+		Minux = Linux
+~ Open Source
+~ Recommended for Server, DBs, Applications Execution, Community based OS
+~ It is not based on GUI
+~ Linux is CLI (Command Line Interface) based
+
+Linux Distributions/Flavours:
+-----------------------------------------
+Redhat Linux, Ubuntu, Cent OS, Amazon Linux, Debian, Suse, Fedora....
+
+
+How to launch the Linux based EC2 Instance (to work with the Linux OS):
+------------------------------------------------------------------------------------------------------
+AWS Console ... EC2 ... Launch one Linux based Instance ... Connect to the Linux Instance using MobaXTerm
+From now we can work with the Linux Commands
+
+Linux Commands:
+-------------------------
+1. whoami - It tells about the present user who is using the system
+2. pwd - present working directory
+	In Linux we have Directories (Folders) and Normal Files (Text Files)
+3. mkdir <directory name> - Is used to create directory
+4. ls -l (or) ls - Is used to list the directories and normal files available
+5. rmdir <directory name> - Is used to delete a directory
+6. cd <directory name> - Is used to change the directory
+7. cd .. - To come out of a particular directory (one step backward)
+8. cd ../.. - (two steps backward)
+9. cd <directory name> Ex: cd ec2-user
+10. cd <directory name>/<directory name>/<directory name>/<directory name>...... - Is used for multiple steps forward 
+
+How to Create Normal Files (Text Files) in Linux?
+------------------------------------------------------------------
+In Linux, we can create a file in 3 different ways
+1. touch
+2. cat
+3. vi
+
+11. touch <File Name> - Is used to create a text file
+12. cat > <File Name> - Is used to create a file with some content inside it
+		control + d - Is used to close the file
+13. cat <File Name> - Is used to see the content in a specific file
+14. cat > <File Name> - Is used to write additional data in the existing file
+15. To maintain old data in a file and create additional data in the same file - cat >> <File Name>
+Points to remember:
+	15.1 If we give one > symbol, it replaces the old data and maintains the latest data only.
+	15.2 If we give two > symbols, it will keep the old data and latest data also.
+16. rm <File Name> - Is used to delete a text file
+17. ls -lr - Is used to display the files in reverse alphabetical order
+Points to remember:
+	17.1 By default, when we give ls or ls -l, it will print the files in the alphabetical order
+18. ls -lt - Is used to display the files based on time stamp
+19. How to identify whether it is a file or a directory?
+		When we give ls -l, if the next line is starting with -, then it is a file. 
+		When the line is starting with d, then it is a directory
+20. ls -l <Directory Name> - Is used to print the content of a particular directory
+21. rmdir <Directory Name> - Is used to delete a directory and the content inside it
+Note: After excuting above command we will see error, because the directory is not empty.
+Points to remember:
+	21.1 rmdir is used to delete only empy directory
+To forcefully delete the directory and the content inside it, rmdir -r <Directory Name>
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
