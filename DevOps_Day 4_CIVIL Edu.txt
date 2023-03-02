@@ -1,0 +1,113 @@
+#############################################################################################
+										DevOps - Day 4
+#############################################################################################
+22. Renaming a File & Directory
+mv <Existing File Name> <Modified File Name>
+mv aws.txt kastro.txt
+Point to remember: To move the files from one directory to another directory, we can use "mv" command
+
+23. How to copy the data from one file to another file
+cat <Exisiting File Name> > <File Name to which you want to copy the content>
+cat <File 1 Name> > <File 2 Name>
+cat kastro.txt > devops.txt
+Point to remember: If the new file is not available, it will automatically be created.
+cat <File Name> - Is used to see the content in the file.
+
+24. How to copy the content of 2 files into a 3rd file
+cat <File 1 Name> <File 2 Name> > <File 3 Name>
+
+25. How to create a copy of a file
+cp <File 1 Name> <File 2 Name>
+Point to remember: 'cp' is used only for one file
+'cat' is used for multiple files and/or one file
+
+26. How to move the file from one directory to another directory
+mv <path1> <path2>
+mv /home/ec2-user /home/linux
+
+27. 
+If you want to read the content of a file from top to bottom,
+	cat <File Name>
+If you want to read the content of a file from bottom to top,
+	tac <File Name>
+
+28. If you want to see the content of a file only the first 10 lines
+	head <File Name>
+      If you want to see the content of a file only the last 10 lines
+	tail <File Name>
+      If you want to see the content from a specific line (Ex:first 20 lines)
+	head -n 20 <File Name>
+     If you want to see the content from a specific line (Ex:last 20 lines)
+	tail -n 20 <File Name>
+
+29. How to check the word count of a file
+	wc <File Name>
+		Ex: 1 10 20
+				1 represents number of lines
+				10 represents number of words
+				20 represents number of characters
+
+30. GREP (Global Regular Expression Print)
+GREP is used to search for a word
+Syntax: grep '<Word Name>' <File Name>
+Point to remember: GREP is case sensitive
+If you want to ignore the case-sensitive in GREP
+	grep -i '<Word Name>' <File Name>
+If you want to search for a word in all the file available in a directory
+	grep -i '<Word Name>' *
+
+If you want to search for a word in sub-directories
+grep -R '<Word Name>'
+
+31. How to work with text editors in Linux
+Text editors are used to edit the files
+Default text editor in Linux is "vi" (Visual Editor)
+Default text editor in Windows is "Notepad" 
+
+How to create a file using "vi"
+	vi <File Name>
+	In order to write the content inside a file, press "i"
+			"i" represents "insert"
+	After writing the content, if you want to exit from file, you have to press "escape"
+	After pressing the "escape" button, you have to type :wq
+		If you dont want to save the file, :q!
+
+32. SED (Stream Editor)
+SED is  used to replace a word with another word.
+Using SED command we can replace the text without opening the file
+Syntax: sed 's/<Word>/<New Word>/' <File Name>
+Point to remember: If you execute the above command and if you do cat <file name>, you will see the original content only.
+If you want to make changes in the original file also;
+sed -i 's/<Word>/<New Word>/' <File Name>
+To see the modified content: cat <File Name>
+
+Without opening a file, can i delete a particular line? YES. Using SED we can delete a particular line without opening a file
+Syntax: sed '4d' <File Name>
+Point to remember: If you execute the above command and if you do cat <file name>, you will the see original content only.
+If you want to make changes in the original file also;
+sed -i '20d' <File Name>
+To see the modified content: cat <File Name>
+
+If you want to delete the last line in a file;
+	sed '$d' <File Name>
+If you want to delete the content from a specific line (from 20th line)
+	sed '20,$d' <File Name>
+
+_____________________________________________________________________________________________
+
+													By
+												Kastro Kiran V
+
+
+
+
+
+
+
+
+
+
+
+
+
+
