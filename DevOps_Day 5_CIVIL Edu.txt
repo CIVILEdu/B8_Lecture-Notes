@@ -1,0 +1,216 @@
+########################################################################################
+										DevOps - Day 5
+########################################################################################
+File permissions in Linux:
+------------------------------------
+~ Linux is a multi-user based OS
+Types of File Permissions in Linux:
+1. Read (r)
+2. Write (w)
+3. Execute (x)
+
+In Windows OS, we are going to download a ".exe" files
+In Linux OS, we are going to download ".sh" files
+
+A file permission in Linux is divided into 3 sections/parts:
+1. User permissions - first 3 characters represents 'user permissions'
+2. Group permissions - next 3 characters represents 'group permissions'
+3. Others permissions - next 3 characters represents 'other permissions'
+rwx-rwx-rwx 
+civiledu.txt    rw-rw-r--
+Point to Remember: If you see '-' it indicates a specific permission is not available for that user/group/others
+Project:
+DB Team - 3 Persons (r & w)
+Testing Team - 5 Persons (r & x)
+Dev Team - 10 Persons (r & w & x)
+
+How to modify the file permissions linux:
+-------------------------------------------------------
+'chmod' command is used to mdodify the file permissions.
+
+Syntax for adding a file permission (Users):
+	chmod u+<permission name> <File Name>
+
+Syntax for removing a file permission (Users):
+	chmod u-<permission name> <File Name>
+
+Syntax for adding a file permission (Group):
+	chmod g+<permission name> <File Name>
+
+Syntax for removing a file permission (Group):
+	chmod g-<permission name> <File Name>
+
+Syntax for adding a file permission (Others):
+	chmod o+<permission name> <File Name>
+
+Syntax for removing a file permission (Others):
+	chmod o-<permission name> <File Name>
+
+Syntax for adding all the 3 permissions at a time for a particular file
+	chmod 777 <File Name>
+
+File permissions based on numbers:
+---------------------------------------------------
+0 - No permissions
+1 - Only Execute permission
+2 - Only Write permission
+3 - Execute and Write permissions
+4 - Only Read permission
+5 - Read and Execute permissions
+6 - Read and Write permissions
+7 - Read, Write and Execute
+
+Point to Remember:
+1. When you give all the 3 numbers, Linux will execute the permissions from left to right
+2. When you give 1 or 2 numbers, Linux will execute the permissions from right to left
+
+How to work with user accounts in the Linux:
+--------------------------------------------------------------
+~ Linux is a multi-user based OS
+~ Within one Linux Instance we can create multiple user accounts
+~ Multiple users can access one linux instance at a time and they can perform multiple tasks
+~ Every linux instance will have a root account and it will also have the root user (super user).
+		~ Super user will have all types of permissions
+~ When we launch a EC2 VM, we will get ec2-user as a default user account
+		~ "Root Account" will be available by default & "ec2-user" will also be available by default
+~ If you want to switch to root account from ec2-user
+		~ sudo su
+Point to Remember:
+1. If you want to install any software in the Linux VM, you need to be a root user
+2. To exit from any user
+		exit
+
+Creation of Users in Linux:
+------------------------------------------
+By default we will have 2 users in linux; 1. root user, 2. ec2-user
+
+~ To create an user
+		sudo useradd <User Name>
+~ To veryify user account details		
+		id <User Name>
+
+Point to Remember: 
+Whenever we create an user in the Linux, automatically Linux will create a directory on the same username
+
+Creation of Groups in Linux:
+------------------------------------------
+~ To create a group
+		sudo groupadd <Group Name>
+
+~ To see the list of groups available
+		cat /etc/group
+
+How to add Users to group:
+---------------------------------------
+sudo usermod -aG <Group Name> <User Name>
+
+How to delete/remove an User from a group:
+----------------------------------------------------------------
+sudo gpasswd -d <User Name> <Group Name>
+
+How to delete a group:
+---------------------------------
+sudo groupdel <Group Name>
+To see the list of groups available
+	cat /etc/group
+To see the list of users available
+	cat /etc/passwd	
+To see all the users available in a particular group
+	sudo lid -g <Group Name>
+
+________________________________________________________________________________________
+
+													By
+												Kastro Kiran V
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
