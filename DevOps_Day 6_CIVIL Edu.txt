@@ -1,0 +1,198 @@
+########################################################################################
+										DevOps - Day 6
+########################################################################################
+~ sudo useradd manjunath
+~ id manjunath
+~ How to create a password for the user
+		Syntax: sudo passwd <User Name>
+			Ex: sudo passwd manjunath
+~ How to switch from one user to another user
+		Syntax: sudo su <User Name>
+
+How to change the ownership of a file/directory:
+---------------------------------------------------------------------
+The command used to change the ownership of a file/directory is "chown"
+	Syntax: sudo chown <User Name> <File Name>
+		Ex: sudo chown manjunath manju.txt
+Point to remember:
+There are two ways to change the ownership of file
+	1. We can use User Name to change the ownership of a file
+			Syntax: sudo chown <User Name> <File Name>	
+	2. We can use User ID to change the ownership of a file
+			Syntax: sudo chown <User ID> <File Name>
+How to know the user id of a particular user:
+	id <User Name>
+
+How to change the group of a file:
+----------------------------------------------
+	Syntax: sudo chown :<Group name> <File Name>
+
+To see the list of groups:
+	cat /etc/group
+
+How to work with "Locate" and "Find" commands:
+------------------------------------------------------------------------
+~ "Locate" and "Find" commands are used to search for the files in Linux OS.
+~ If you want to see the location of particular file, then we can use "locate" command
+		Syntax: locate <File Name>
+~ If you want to know how many files are available on a same name
+		Syntax: locate -c <File Name>
+~ If you want to see how many .txt files are available
+		Syntax: locate -c *.txt
+~ If you want to see all the list of .txt files and their path
+		Syntax: locate *.txt
+
+Point to remember: In Linux, all the files and directory locations will be stored in Local DataBase
+							locate db
+
+Working with "Find" command:
+----------------------------------------------
+"Find" command will search for files and directories in actual file system.
+It provides advanced searching features
+		Syntax: find <File Name>
+		Syntax: find /home -name <File Name>
+			Note: If the above command is excuted, you will see Permission Denied. It is because, you have to be a root user to perform the above command
+		Syntax: sudo find /home -name <File Name>
+
+If you want to search for the files which are empty:
+	Syntax: sudo find /home -type f -empty
+
+If you want to search for the directories which are empty:
+	Syntax: sudo find /home -type d -empty
+
+To see the documentation of linux commands:
+	man ls
+To know the details of a specific command
+	man <Command Name>
+
+ifconfig - used to print the IP of our VM
+wget - used to download a file based on url
+curl - used to send a request to url
+ping - used to check the network connectivity
+rm <File Name> - used to delete a file
+tar <File Name> - used to extract tar files
+	tar -xvf <File Name>
+zip <File Name> - used to extract a zip file
+
+Package Managers:
+----------------------------
+Top 5 package managers:
+1. yum - Yellowdog Updater, Modifier
+2. apt - Advanced Packaging Tool
+3. rpm - Redhat Package Manager
+4. dnf - Dandified YUM
+5. dpkg - Debian Package Management System
+
+Package manager is a tool that allows users to install/uninstall/upodate a software an on Operating System.
+Ex: yum, apt, rpm, deb, chocklate....
+
+Point to Remember:
+1. For Linux OS, we will use "YUM" package manager
+2. For Ubuntu OS, we will use "APT" package manager
+
+Two categories of Linux Distributions:
+1. deb based linux
+	ubuntu linux, debian linux,....
+	package managers: apt
+
+2. rpm based linux
+	amazon linux, redhat linux, centos,....
+	package managers: yum, rpm, dnf
+
+
+________________________________________________________________________________________
+
+													By
+												Kastro Kiran V
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
