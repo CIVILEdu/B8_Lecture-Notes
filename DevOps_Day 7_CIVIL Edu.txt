@@ -1,0 +1,92 @@
+########################################################################################
+										DevOps - Day 7
+########################################################################################
+MAVEN:
+--------------------
+~ Build Tool - Is to create the project folder structure - MAVEN
+
+~ Lets assume, Dev. Team is using "Java" as the programming language to develop the project. Alone Java cannot make us to complete the final version of a project.
+
+~ We need certain 'other tools' to develop a project - Project Dependencies
+
+~ Project compilation, Unit test execution, Package the project.
+
+~ Maven is an open source software (FREE).
+
+~ Maven is developed by Apache organization. Maven is developed by using 'Java Programming Language (JPL)'.
+
+~ Maven is used to perform build automation for Java Projects. Hence we can call Maven as a JAVA BUILD TOOL.
+----------------------------------------------------
+Maven can be used in multiple ways:
+----------------------------------------------------
+1. Using Maven we can create the initial project folder structure.
+		If you want to develop an App, initially we (Developers) have to decide which programming language 			(JAVA) has to be used. Then, the DevOps engineers will create a project folder structure using    		   	      MAVEN.
+
+2. We can download project dependencies to develop the project - Maven
+		To develop a project, just by using any programming language we cannot build the final version of the 			project. In this case, we might need other tools to develop the project. The other tools required to 				develop a project are called as Project Dependencies.
+	How maven will understand what are the dependencies that are required to develop a project ? ?
+		Once after creating the project folder structure, we will see a file called "pom.xml"
+		"pom.xml" will act as an input file for the maven to download the dependencies.
+		Whatever the additional tools that are required to develop a project, all these tools will be configured in 			the "pom.xml"
+POM - Project Object Model
+
+3. Project source code compilation can be done using Maven
+		When we want to develop a project, we need to create a ".java" file. In the ".java" file we will write the 			code required for project. That code is called as SOURCE CODE.
+		Once the code is completely written, we cannot directly execute the code. In order to make the computer 		to understand our code, we have to convert source code into byte code. 
+		The process of converting the 	source code into byte code is called as Compilation. once compilation is 			done, the ".java" file will be converted into ".class" file. 
+		Further, the ".class" file will be executed using JVM. Then we are going to get the final output.
+
+4. We can package the JAVA PROJECT as a "jar" file or "war" file - Maven
+		When we have 1000s of .java files, it becomes complex to convert all the 1000s of .java files into 				a .class files. In this case, we are going to package all files into a war file or jar file.
+JAR - JAVA ARCHIVE - Standalone java applications will be packaged as jar files.	
+	The software which is specific to one computer is called as Stand Along Application.
+WAR - WEB ARCHIVE - Java web applications will be packaged as war files.
+
+~ Once the jar files or war files are created, then the jar file or war file will be deployed into the webserver, for execution process inorder to get the output
+
+~ The process of keeping the jar file or war file into the webserver is called as "Deployment." Then the server will execute teh war file or jar file to get the output.
+
+~ Compiling the source code and packaging the source code is called as "Build Activity"
+
+
+_________________________________________________________________________________________
+
+													By
+												Kastro Kiran V
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+________________________________________________________________________________________
+
+													By
+												Kastro Kiran V
