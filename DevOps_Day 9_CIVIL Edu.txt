@@ -1,0 +1,84 @@
+########################################################################################
+										DevOps - Day 9
+########################################################################################
+MAVEN Terminology:
+--------------------------------
+~ "pom.xml" file will be created while creating the project folder structure using Maven.
+
+1. Archetype - It represents what type of project we are going to create.
+	a) Java Stand-alone Application - maven-archetype-quickstart
+	b) Java Web Application - maven-archetype-webapp
+Maven provides alomost 1000+ archetypes.
+
+2. groupId - It represents company name or project name.
+
+3. Artifact Id - It represents project name or project module name.
+Amazon.in - Home, Payments, Cart, Orders, Tracking Details
+
+4. Packaging - It represents how you want to package your application i.e jar file or war file.
+
+======================================
+How to create Java Stand-alone Application?
+======================================
+~ Create a folder in D-drive ---> Open Command Prompt in that folder path ---> Execute the below command
+
+mvn archetype:generate -DgroupId=in.civiledu -DartifactId=01-Maven-App-CivilEdu -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+---> You will see the project folder structure.
+
+01-Maven-App-CivilEdu
+	src
+		main - "App.java" file will be available - "App.java" file is used to write the application source code.
+		
+		test - "AppTest.java" file will be available - "AppTest.java" is used to test the code - J Unit Code will be 			available here
+
+	pom.xml
+
+~ The code available in test folder is primarly meant for testing purpose.
+
+~ Without "pom.xml" file maven will not work
+
+~ In pom.xml file, when you see SNAPSHOT, that means the project is under development.
+Once the project is developed completely, we are going to change it as RELEASE 
+
+~ How to add dependencies in the "pom.xml" file
+	mvnrepository.com - Search for the required dependency - Copy the dependency and add it in the pom.xml . This process is called as adding the dependency in pom.xml
+
+How maven will download dependencies in the backend?
+------------------------------------------------------------------------------
+~ Maven will download the dependencies using Repository.
+
+~ In Maven we have 3 types of repo.s: 
+	1. Central Repo. - It will be maintained by Apache Organization.
+	2. Remote Repo. - It will be maintained by Companies.
+	3. Local Repo. - It will be created in our system.
+		Path to find local repo. ---> C Drive ---> Users ---> Kiran ---> .m2 folder
+			.m2 folder is the local repo. created by Maven
+
+Concept of Repo.s
+---------------------------
+
+
+________________________________________________________________________________________
+								
+													By
+												Kastro Kiran V
+
+============================================
+How to create web application using Maven:
+============================================
+mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=in.civiledu -DartifactId=01-Maven-WebApp-CivilEdu -DinteractiveMode=false
+
+
+
+
+
+
+
+
+
+
+________________________________________________________________________________________
+
+													By
+												Kastro Kiran V
