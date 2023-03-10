@@ -1,0 +1,106 @@
+########################################################################################
+										DevOps - Day 11
+########################################################################################
+Source Code Reposiotry Tool:
+-------------------------------------------
+~ GIT is a Source Code Repository Tool or Source Code Management Tool.
+~ GIT is developed by Linus Torvalds. He created GIT for the development of Linux Kernel.
+~ GIT is also called as Version Control System (VCS)
+~ VCS is a system which maintains the records of your changes. These changes will be kept in a special DB called as Repository.
+~ VCS is able to track the changes that you have made to the code every day.
+~ VCS allows for collaborative  development.
+~ VCS also allows you to track the changes, who have made the changes, what changes are made, and when they have made.
+
+VCS - Types:
+---------------------
+1. Local VCS - Our own PC
+2. Centralized VCS - Developers will take the "piece" of code
+	Ex: Subversion, MS Team Foundation Server
+3. Distributed VCS - Developers will take the "complete" code
+	Ex: "GIT", Bit Bucket, Subversion, Perforce, Mercurial
+
+~ GIT will act as a Local Repository or VCS
+~ GIT Hub will act as a Central Repository.
+
+
+GIT Vs. GIT Hub:
+------------------------------
+Git:
+1. Git is a software.
+2. Git is a command-line tool
+3. Git is installed locally on the system
+4. Git is maintained by Linux.
+5. Git is open-source licensed.
+GitHub:
+1.GitHub is a service.
+2.GitHub is a graphical user interface (GUI)
+3.GitHub is hosted on the web
+4.GitHub is maintained by Microsoft.
+5.GitHub includes a free tier and a pay-for-use tier.
+
+Downloading and Installing GIT:
+----------------------------------------------
+Download the Git using the below link:
+https://git-scm.com/download/win
+
+Create GIT Hub account using the link below:
+https://github.com/join
+
+To vereify whether GIT is installed on your local device or not:
+	git --version
+If you see the version number, it means the git is installed successfully.
+
+How to open GIT in your local device/PC:
+-----------------------------------------------------------
+Create a folder (GIT Practice) in D-drive ---> Go inside that folder ---> Right click --->Select "GIT Bash Here" ---> GIT Terminal will open
+
+~ GIT is a command line tool, which means we are going to work with Commands.
+~ GIT Hub is a GUI / Web Interface
+~ GIT Hub is used to host the Source Code
+~ We have 3 types of GIT
+	1. GIT 
+	2. GIT Hub
+	3. GIT Lab
+
+
+GIT Configuration:
+----------------------------
+~ To configure GIT, we need User Name/ID, Email
+~ Create a folder in D Drive (GIT Practice) ---> Open GIT Bash in that folder path
+~ To Configure User Name
+		git config --global user.name '<User Name/User ID>'
+~ To Configure Email ID
+		git config --global user.email '<User Email ID>'
+~ To remove user name or email
+		git config --global --unset user.name '<User Name/User ID>'
+		git config --global --unset user.name '<User Email ID>'
+~ If you want to know the User name and Email
+		git config --list
+
+GIT Configuration Locations:
+-------------------------------------------
+1. Local
+	- The settings here applies to the current repository in the current folder
+	- Here we will have .git folder.
+
+2. Global
+	- The settings here applies to all the repositories of the current user
+	- C-drive/users/kiran/.gitconfig
+
+3. System
+	- The settings here applies for all users of the current computer.
+	- C-drive/Users/local/etc/gitconfig
+
+The data tracking will be taken from above levels.
+
+In GIT Hub we have 2 types of Repositories:
+------------------------------------------------------------------
+1. Public Repo
+2. Private Repo.
+________________________________________________________________________________________
+								
+													By
+												Kastro Kiran V
+
+
+
