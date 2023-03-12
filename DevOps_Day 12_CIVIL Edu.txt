@@ -1,0 +1,125 @@
+########################################################################################
+										DevOps - Day 12
+########################################################################################
+~ For each project, a Repository will be created.
+~ Repo. will be available in the GIUHUB.
+~ For every repo. an unique URL will be generated. (Repo. URL)
+~ All developers and DevOps Engineers who are assigned for a project will connect to the Repo. using the Repo. URL.
+~ Repo. is used to store the Project Source Code.
+~ Types of repo.s
+	1. Public Repo. - FREE Tier
+	2. Private Repo. - Premium version GIT
+~ Public Repo. can be accessed by everybody in the GITHUB. But we can choose who can modify the content in our repo.
+~ In Private Repo. we can choose who can access and who can modify the code/content.
+========================
+Creating a Repo. in GITHUB
+========================
+-- Sign in to GITHUB ---> Repositories ---> New ---> Repo. Name: Batch 8_DevOps ---> Choose "Public" ---> Create Repo.
+-- Once the repo. is created, a Repo. URL will be generated.
+
+=========================
+Opening GIT Client in our PC
+=========================
+-- Create Folder ---> Right click by going inside the folder ---> Choose "GIT Bash here"
+
+=========================
+Working with GIT Client
+=========================
+git help ---- To see the most commonly used commands
+clear ---- To clear the screen
+
+Initializing the GIT Client
+--------------------------------------
+1. git init ---- To initialize GIT Client
+	A ".git" folder will get created
+2. git clone <Repo. URL> ----- To clone the repo. available in GITHUB account into OUR PC
+3. git status ----- To know the status of a file/repo.
+	3 States of a file/repo.
+		1. Untracked files
+		2. Unstaged files
+		3. Staged files
+Create a file in the folder (touch kastro.java) ---> git status ---> "kastro.java" file will be visible in Red colour (It means its an Untracked file)
+4. git add . ----- To add a file into the staging area.
+	Staged files: The files which are added for commit are called as Staged files.
+	Unstaged files: You will see the files which are modified but not added for commit.
+	Untracked files: All the newly created files are untracked files (Red colour)
+5. git commit -m "<Message>" ---- To commit the staged files
+GITHUB will maintain two types of repo.s: 
+	1. Local Repo.
+	2. Central Repo.
+6. git push ----- To push a file into the central repo.
+Note: A dialogue box opens, where you need to sign-in with your GITHUB account
+
+Summary:
+Step 1: At first, a kastro.java file is created in local repo.
+Step 2: The file is then staged - git add .
+Step 3: The file is then committed - git commit -m "<Message>"
+Step 4: The file is then pushed into the Central repo. - git push
+
+Understanding "git add ." command:
+--------------------------------------------------------
+git add . ---- All the files available in local repo. will be added to staging area.
+git add <File Name> ----- To add a specific file into the staging area.
+
+Can we do the Unstaging of a file? YES
+ git restore --stage <File Name>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+________________________________________________________________________________________
+								
+													By
+												Kastro Kiran V
+
+
+

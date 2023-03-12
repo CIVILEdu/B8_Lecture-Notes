@@ -1,0 +1,142 @@
+########################################################################################
+										DevOps - Day 10
+########################################################################################
+Maven Goals:
+-------------------
+~ Build Activity - 
+	.java -------> .class -------> jar or war
+
+~ To perform the project build activities, Maven provides several goals; 
+	clean, compile, test, package, install
+
+~ If you want to delete the old ".java" files and create a new ".java" files, we will use "CLEAN" Goal.
+	Command: mvn clean
+Clean goal will delete the target folder
+~ If you want to convert ".java" files into ".class" files, we will use "COMPILE" Goal
+	Command: mvn compile
+~ If you want to test the new ".java" files, we will use "TEST" Goal
+	Command: mvn test
+~ If you want to package all the ".class" files, we will use "PACKAGE" Goal
+	Command: mvn package
+~ If you want to keep all the ".class" files into the web server, we will use "INSTALL" Goal
+	Command: mvn install
+Install goal is used to install our project as a dependency in the local repository.
+
+Step 1: We have created the ".java" file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\AWS\CIVIL Edu AWS Batch 8\Maven Practice-B8\01-Maven-App-CivilEdu\src\main\java\in\civiledu - "App.java" file is available
+
+D:\AWS\CIVIL Edu AWS Batch 8\Maven Practice-B8\01-Maven-App-CivilEdu\src\test\java\in\civiledu - "AppTest.java" file is available
+
+execute "mvn clean" goal. 
+"mvn clean" goal will delete the existing "target" folder.
+
+Step 2: We have to convert the ".java" file into the ".class" file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Open command prompt in the path where we have created the "Stand-alone application"
+
+Inorder to convert the ".java" file into the ".class" file, we will use "mvn compile" goal
+
+When you execute "mvn compile" goal, it will create a "target" folder.
+	Inside the "target" folder, we will have the ".class" file
+
+Step 3: Execute "mvn clean" goal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"mvn clean" goal will delete the existing "target" folder
+
+Can we execute multiple goals at the same time?
+----------------------------------------------------------------------
+YES.
+mvn clean compile
+
+Step 4: Testing the code
+~~~~~~~~~~~~~~~~~~~~~~
+mvn test
+The code which is tested will be available in "AppTest.java" file
+
+Step 5: Execute "mvn package" goal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The purpose of "mvn package" goal is to package the code as a jar file or war file.
+Point to Remember:
+1. For standalone applications, jar file will be created.
+2. For web applications, war file will be created
+
+Step 6: Execute "mvn install" goal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The purpose of "mvn install" is to install our project as a dependency in our local repository (.m2 folder)
+
+---------------------------------------------------------------------
+How to create the JAVA WEB APPLICATION?
+---------------------------------------------------------------------
+mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=in.civiledu -DartifactId=02-Maven-WebApp-CivilEdu -DinteractiveMode=false
+
+Go inside the JAVA WEB APPLICATION folder and then execute the below commands:
+
+mvn clean
+mvn compile
+mvn test
+mvn package
+mvn install
+
+
+Summary of Maven Topics:
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Maven Introduction - Purpose of Maven - Uses of Maven
+2. Java Installation - Setting up of JAVA_HOME, Setting up the path for Java, 
+    Maven Installation - Setting up of MAVEN_HOME, Setting up the path for Maven.
+3. Maven Terminology
+4. Maven Repositories
+5. Maven Goals
+6. Created the Standalone application
+7. Create the web application 
+=================================================================================
+Next Topic: Repository Tools - GIT & GITHUB
+=================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_________________________________________________________________________________________
+Maven Topics:
+------------------------
+
+1. Maven Introduction
+2. Maven Installation
+3. Java Installation
+4. Setting up of MAVEN_HOME & JAVA_HOME
+5. Seetting up the path of Java & Maven 
+6. Maven Terminology
+7. Created standalone application
+8. Concept of Repositories
+9. Maven Goals
+10. Execution of Maven Goals
+11. Created Java WebApplication
+
+
+Next Topic: Repository Tool (GIT & GITHUB)
+
+_________________________________________________________________________________________
+								
+													By
+												Kastro Kiran V
+
+
+
